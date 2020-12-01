@@ -1,0 +1,48 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+<div class="main-content">
+    <div class="d-flex justify-content-center">
+        <div class="img-scroller">    
+            <img src="{{ 'bottom.png' | asset_url }}" alt="" class="scroll-top">  
+            <img src="{{ 'Rectangle592.png' | asset_url }}" alt="" class="scroll-img my-2"> 
+            <img src="{{ 'Rectangle593.png' | asset_url }}" alt="" class="scroll-img my-2"> 
+            <img src="{{ 'Rectangle594.png' | asset_url }}" alt="" class="scroll-img my-2"> 
+            <img src="{{ 'Rectangle595.png' | asset_url }}" alt="" class="scroll-img my-2"> 
+            <img src="{{ 'Rectangle596.png' | asset_url }}" alt="" class="scroll-img my-2"> 
+            <img src="{{ 'bottom.png' | asset_url }}" alt="" class="scroll-bot">  
+        </div>
+        <div class="main-img mx-4">
+            <img src="{{ 'Rectangle512.png' | asset_url }}" alt="">
+        </div>
+        <div class="img-desc">
+            <h1 class="prod-title">CAST IRON TORTILLA PRESS</h1>
+            <div class="review">
+                <img src="{{ 'star.png' | asset_url }}" alt="">
+                <img src="{{ 'star.png' | asset_url }}" alt="">
+                <img src="{{ 'star.png' | asset_url }}" alt="">
+                <img src="{{ 'star.png' | asset_url }}" alt="">
+                <img src="{{ 'star.png' | asset_url }}" alt="">
+                <a href="">Based on 48 reviews (Click to read)</a>
+            </div>
+            <div class="d-flex my-2">
+                <p class="shipping">🛳️ FREE SHIPPING TO THE US</p>
+                <div class="mx-4"><button href="javascript:void(0)" class="btn btn-task btn-circle">?</button></div>                        
+            </div>
+            <div>
+                <p class="sold">SOLD OUT</p>     
+                <p class="notify">Notify me when this product is available:</p>     
+                <form>
+                    <div class="form-group">                              
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email Address">                              
+                    </div>
+                    <button type="submit" class="btn btn-block btn-danger">SUBSCRIBE</button>
+                </form>            
+            </div>
+            
+            {% include 'benefits' %}
+            {% include 'frequently' %}
+        </div>
+    </div>
+</div>
+

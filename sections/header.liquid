@@ -1,0 +1,27 @@
+<section class="header">
+    <div class="topbar d-flex">
+        <p class="m-0 mx-auto align-self-center">FREE SHIPPING TO THE UNITED STATES!</p>
+    </div>
+    <nav class="navbar navbar-light">
+        <div class="d-flex justify-content-between w-100 p-nav">
+            <span class="navbar-brand mb-0 h1 logo">
+                Uno Casa
+            </span>
+            {% include 'menu' %}
+
+            {% schema %}
+            {
+                "name": "Main Menu",
+                "settings": [
+                    {
+                        "type": "link_list",
+                        "id": "main_linklist",
+                        "label": "Menu",
+                        "default": "main-menu"
+                    }
+                ]
+            }
+            {% endschema %}
+        </div>            
+    </nav>
+</section>  

@@ -1,0 +1,13 @@
+<div class="align-self-center d-flex justify-content-between">     
+    {% for link in linklists[section.settings.main_linklist].links %}
+
+        {% if link.links == blank %}
+            <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+        {% endif %}
+    {% endfor %}                
+    <!-- <a href="" class="nav-link">Shop</a>
+    <a href="" class="nav-link">About</a>
+    <a href="" class="nav-link">Blog</a> -->
+    <span class="nav-link" onclick="openCart()"> Cart </span>
+    <span class="nav-link" onclick="openCart2()"> Cart </span>
+</div>
